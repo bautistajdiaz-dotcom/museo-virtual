@@ -1,0 +1,314 @@
+/* ==========================
+   RESET GENERAL
+========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   FONDO GENERAL
+========================== */
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: #f8fafc;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* ==========================
+   TITULO
+========================== */
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #fbbf24;
+    text-shadow: 0 0 20px rgba(251,191,36,0.5);
+}
+
+/* ==========================
+   INTRODUCCION
+========================== */
+
+.introduccion{
+    width: 90%;
+    max-width: 950px;
+    margin: 30px auto 60px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.95);
+    color: #1e293b;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.introduccion h2{
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.introduccion p{
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+/* ==========================
+   CARRUSEL
+========================== */
+
+.carousel{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 25px;
+    margin: 0 20px;
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar{
+    height: 10px;
+}
+
+.carousel::-webkit-scrollbar-track{
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+}
+
+.carousel::-webkit-scrollbar-thumb{
+    background: #fbbf24;
+    border-radius: 20px;
+}
+
+.carousel a{
+    flex-shrink: 0;
+}
+
+.carousel img{
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #fbbf24;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.carousel img:hover{
+    transform: scale(1.08);
+    border-color: #fde68a;
+    box-shadow: 0 0 30px rgba(251,191,36,0.7);
+}
+
+/* ==========================
+   OBRAS
+========================== */
+
+.obra{
+    display: none;
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    background: white;
+    color: #1e293b;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+.obra:target{
+    display: block;
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.obra h2{
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.obra img{
+    width: 100%;
+    max-height: 700px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 25px auto;
+    border-radius: 15px;
+    border: 4px solid #fbbf24;
+}
+
+.obra p{
+    font-size: 1.1rem;
+    line-height: 1.9;
+    text-align: justify;
+    color: #334155;
+}
+
+/* ==========================
+   BOTON VOLVER
+========================== */
+
+.volver{
+    display: inline-block;
+    margin-bottom: 25px;
+    text-decoration: none;
+    background: #fbbf24;
+    color: #0f172a;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.volver:hover{
+    background: #fde68a;
+    transform: translateY(-3px);
+}
+
+.logo-colegio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 30px auto;
+}
+
+.logo-colegio img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 4px solid #fbbf24;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+
+/* ==========================
+   PIE DE PAGINA
+========================== */
+
+footer{
+    margin-top: 80px;
+    background: #0b1120;
+    color: white;
+    border-top: 4px solid #fbbf24;
+    padding-top: 35px;
+}
+
+.footer-contenido{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+}
+
+.footer-contenido img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background: white;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.footer-contenido h3{
+    color: #fbbf24;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.footer-contenido p{
+    margin: 5px 0;
+    color: #cbd5e1;
+}
+
+.footer-abajo{
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background: #070b14;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px){
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .introduccion{
+        padding: 20px;
+    }
+
+    .introduccion h2{
+        font-size: 1.5rem;
+    }
+
+    .introduccion p{
+        font-size: 1rem;
+    }
+
+    .carousel img{
+        width: 220px;
+        height: 150px;
+    }
+
+    .obra{
+        padding: 20px;
+    }
+
+    .obra h2{
+        font-size: 1.6rem;
+    }
+
+    .obra p{
+        font-size: 1rem;
+    }
+     .logo-colegio img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer-contenido{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contenido img{
+        width: 80px;
+        height: 80px;
+    }
+}
